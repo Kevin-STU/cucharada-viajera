@@ -17,10 +17,10 @@ const ReviewForm = ({ onSubmit, initialData = {} }) => {
       onSubmit={handleSubmit}
     >
       <h3 className="text-lg font-medium text-gray-800 mb-4">
-        {initialData.comment ? "Edit Review" : "Add Review"}
+        {initialData.comment ? "Editar Reseña" : "Añadir Reseña"}
       </h3>
       <label className="block mb-4">
-        <span className="text-gray-700">Comment:</span>
+        <span className="text-gray-700">Comentario:</span>
         <textarea
           value={review}
           onChange={(e) => setReview(e.target.value)}
@@ -29,7 +29,7 @@ const ReviewForm = ({ onSubmit, initialData = {} }) => {
         />
       </label>
       <label className="block mb-4">
-        <span className="text-gray-700">Rating:</span>
+        <span className="text-gray-700">Calificación:</span>
         <select
           value={rating}
           onChange={(e) => setRating(e.target.value)}
@@ -46,7 +46,7 @@ const ReviewForm = ({ onSubmit, initialData = {} }) => {
         type="submit"
         className="mt-6 px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600"
       >
-        {initialData.comment ? "Update" : "Submit"}
+        {initialData.comment ? "Actualizar" : "Enviar"}
       </button>
     </form>
   );

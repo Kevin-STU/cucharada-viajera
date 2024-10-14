@@ -23,7 +23,7 @@ const RestaurantPage = () => {
       </h2>
       <p className="text-gray-600 mb-8">{restaurant.description}</p>
       <ReviewForm onSubmit={addReview} />
-      <h3 className="text-xl font-semibold text-gray-800 mt-8">Reviews:</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mt-8">Reseñas:</h3>
       <div className="mt-4">
         {reviews.map((review, index) => (
           <div key={index} className="border-t border-gray-200 pt-4">

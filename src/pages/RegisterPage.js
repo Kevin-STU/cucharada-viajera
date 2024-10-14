@@ -11,13 +11,13 @@ const RegisterPage = () => {
     if (success) {
       navigate("/login");
     } else {
-      alert("Registration failed. Email might already be in use.");
+      alert("El correo que utilizaste ya está en uso");
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <AuthForm title="Register" onSubmit={handleRegister} />
+      <AuthForm title="Registro" onSubmit={handleRegister} />
     </div>
   );
 };

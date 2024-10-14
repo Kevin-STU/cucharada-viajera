@@ -10,7 +10,7 @@ const RestaurantCard = ({ restaurant }) => {
         to={`/restaurant/${restaurant.id}`}
         className="mt-4 inline-block text-yellow-600 hover:text-yellow-800"
       >
-        View Details
+        Ver detalles
       </Link>
     </div>
   );

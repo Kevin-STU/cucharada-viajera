@@ -22,15 +22,15 @@ const ReviewPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-gray-800 mb-4">
-        Write a Review for {restaurant.name}
+        Escribe una reseña a {restaurant.name}
       </h2>
       <ReviewForm onSubmit={addReview} />
-      <h3 className="text-xl font-semibold text-gray-800 mt-8">Reviews:</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mt-8">Reseñas:</h3>
       <div className="mt-4">
         {reviews.map((review, index) => (
           <div key={index} className="border-t border-gray-200 pt-4">
-            <p className="text-gray-800">Comment: {review.comment}</p>
-            <p className="text-yellow-600">Rating: {review.rating}</p>
+            <p className="text-gray-800">Comentario: {review.comment}</p>
+            <p className="text-yellow-600">Calificación: {review.rating}</p>
           </div>
         ))}
       </div>

@@ -11,13 +11,13 @@ const Navbar = () => {
       <ul className="flex space-x-4">
         {user ? (
           <>
-            <li className="text-white">Welcome, {user.email}</li>
+            <li className="text-white">Bienvenido, {user.email}</li>
             <li>
               <button
                 onClick={logout}
                 className="text-white hover:text-yellow-500"
               >
-                Logout
+                Salir
               </button>
             </li>
           </>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <>
             <li>
               <Link to="/login" className="text-white hover:text-yellow-500">
-                Login
+                Entrar
               </Link>
             </li>
             <li>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 to="/register"
                 className="text-white hover:text-yellow-500"
               >
-                Register
+                Registrarse
               </Link>
             </li>
           </>

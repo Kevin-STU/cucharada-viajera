@@ -11,13 +11,13 @@ const LoginPage = () => {
     if (success) {
       navigate("/");
     } else {
-      alert("Invalid credentials");
+      alert("Credenciales invalidas");
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <AuthForm title="Login" onSubmit={handleLogin} />
+      <AuthForm title="Entrar" onSubmit={handleLogin} />
     </div>
   );
 };

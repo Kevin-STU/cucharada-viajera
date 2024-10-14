@@ -16,7 +16,7 @@ const AuthForm = ({ title, onSubmit }) => {
     >
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">{title}</h2>
       <label className="block mb-4">
-        <span className="text-gray-700">Email:</span>
+        <span className="text-gray-700">Correo:</span>
         <input
           type="email"
           value={email}
@@ -26,7 +26,7 @@ const AuthForm = ({ title, onSubmit }) => {
         />
       </label>
       <label className="block mb-4">
-        <span className="text-gray-700">Password:</span>
+        <span className="text-gray-700">Contraseña:</span>
         <input
           type="password"
           value={password}

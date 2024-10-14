@@ -10,7 +10,7 @@ const SelectRestaurantPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-gray-800 mb-6">
-        Select a Restaurant to Review
+        Selecciona un restaurante para reseñar
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {restaurantsData.map((restaurant) => (
@@ -26,7 +26,7 @@ const SelectRestaurantPage = () => {
               to={`/add-review/${restaurant.id}`}
               className="mt-4 inline-block text-yellow-600 hover:text-yellow-800"
             >
-              Write Review
+              Escribir reseña
             </Link>
           </div>
         ))}

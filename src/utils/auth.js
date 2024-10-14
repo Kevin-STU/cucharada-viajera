@@ -25,7 +25,7 @@ export const register = ({ email, password }) => {
 
 export const logout = () => {
   localStorage.removeItem("loggedUser");
-  window.location.reload(); // Refresh the page after logout
+  window.location.reload(); // Despoues de salirse, refresca la página
 };
 
 export const getUser = () => {
