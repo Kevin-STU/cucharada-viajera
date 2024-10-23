@@ -1,39 +1,18 @@
-const express = require('express');
-const mysql = require('mysql');
+const express = require("express");
+const cors = require("cors");
+
+const authRoutes = require("./routes/authRoutes");
+const restaurantRoutes = require("./routes/restaurantRoutes");
+const reviewRoutes = require("./routes/reviewRoutes");
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root', 
-  database: 'restaurant_reviews'
-});
+app.use("/api/auth", authRoutes);
+app.use("/api/restaurants", restaurantRoutes);
+app.use("/api/reviews", reviewRoutes);
 
-db.connect(err => {
-  if (err) throw err;
-  console.log('Conectado a MySQL');
-});
-
-// Ruta para obtener todos los restaurantes
-app.get('/api/restaurants', (req, res) => {
-  const sql = 'SELECT * FROM restaurants';
-  db.query(sql, (err, result) => {
-    if (err) throw err;
-    res.send(result);
-  });
-});
-
-// Ruta para agregar una reseña
-app.post('/api/reviews', (req, res) => {
-  const { comment, rating, user_id, restaurant_id } = req.body;
-  const sql = 'INSERT INTO reviews (comment, rating, user_id, restaurant_id) VALUES (?, ?, ?, ?)';
-  db.query(sql, [comment, rating, user_id, restaurant_id], (err, result) => {
-    if (err) throw err;
-    res.send('Reseña agregada');
-  });
-});
-
-app.listen(3001, () => {
-  console.log('Servidor corriendo en el puerto 3001');
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
