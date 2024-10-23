@@ -14,5 +14,5 @@ app.use("/api/restaurants", restaurantRoutes);
 app.use("/api/reviews", reviewRoutes);
 
 app.listen(5000, () => {
-  console.log("Server running on port 5000");
+  console.log("Servidor corriendo en el puerto 5000");
 });
